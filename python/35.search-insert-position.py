@@ -15,8 +15,6 @@ class Solution:
         high = len(nums) - 1
         while low <= high:
             mid = low + (high - low)//2
-            if high - low == 1 and nums[high] > target and nums[low] < target:
-                return high
             if nums[mid] == target:
                 return mid
             elif nums[mid] > target:
