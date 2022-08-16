@@ -8,12 +8,21 @@
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         if target < nums[0] :
-            return 0        
-        for i in range(len(nums)):
-            if nums[i] == target:
-                return i
-            elif nums[i] > target:
-                return i
-        return len(nums)
+            return 0   
+        if target > nums[len(nums) - 1]:
+            return len(nums)
+        low = 0
+        high = len(nums) - 1
+        while low <= high:
+            mid = low + (high - low)//2
+            if high - low == 1 and nums[high] > target and nums[low] < target:
+                return high
+            if nums[mid] == target:
+                return mid
+            elif nums[mid] > target:
+                high = mid - 1
+            else:
+                low = mid + 1
+        return high + 1
 # @lc code=end
 
