@@ -8,7 +8,7 @@ class Solution:
             else:
                 if len(map[groupSizes[i]][-1]) < groupSizes[i]:
                     map[groupSizes[i]][-1].append(i)
-                elif len(map[groupSizes[i]][-1]) >= groupSizes[i]:
+                else:
                     map[groupSizes[i]].append([i])
         ans = []
         for key in map:
