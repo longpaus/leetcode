@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 from collections import defaultdict
-from curses import nocbreak
-from curses.ascii import SO
-from inspect import CO_ITERABLE_COROUTINE
+
+
+
 
 class Solution:
     def findLeastNumOfUniqueInts(self, arr: list[int], k: int) -> int:
@@ -20,5 +20,3 @@ class Solution:
             if k == 0:
                 break
         return count
-test = Solution()
-print(test.findLeastNumOfUniqueInts([4,3,1,1,3,3,2],3))
