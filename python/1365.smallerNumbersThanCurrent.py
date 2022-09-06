@@ -18,14 +18,10 @@ class Solution:
         return -1
 
     def smallerNumbersThanCurrent(self, nums: list[int]) -> list[int]:
-        m = {}
-        for i in range(len(nums)):
-            m[i] = nums[i]
-        nums.sort()
+        tmp = list(sorted(nums))
         ans = []
-        for key in m:
-            ans.append(self.binary_search(nums,m[key]))
+        for i in range(len(nums)):
+            ans.append(self.binary_search(tmp,nums[i]))
         return ans
-
 
         
