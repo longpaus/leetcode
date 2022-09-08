@@ -12,7 +12,7 @@ public class Solution {
         for(int right = 0;right < nums.length; right++){
             if(!numSet.contains(nums[right])){
                 numSet.add(nums[right]);
-                sum += nums[right]
+                sum += nums[right];
             }
             else{
                 while(nums[left] != nums[right]){
