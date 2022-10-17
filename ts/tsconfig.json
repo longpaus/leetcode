@@ -1,9 +1,5 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "typeRoots": ["./node_modules/@types"],
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
-  }
+    "compilerOptions": {
+        "esModuleInterop": true
+    }
 }
